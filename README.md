@@ -13,7 +13,7 @@ I checked on the following environment.
 - macOS Sonoma 14.4
 - pixi 0.45.0
 
-## install pixi
+## Install pixi
 
 ```bash
 curl -fsSL https://pixi.sh/install.sh | bash
