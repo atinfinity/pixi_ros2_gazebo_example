@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="lrf_gazebo_v0" params="prefix min_rad max_rad min_range max_range">
+    <gazebo reference="${prefix}_lrf_link">
+      <sensor type="gpu_lidar" name="${prefix}_lrf_sensor">
+        <pose>0 0 0 0 0 0</pose>
+        <topic>scan</topic>
+        <visualize>false</visualize>
+        <update_rate>40</update_rate>
+        <ignition_frame_id>${prefix}_lrf_link</ignition_frame_id>
+        <lidar>
+          <scan>
+            <horizontal>
+              <samples>1000</samples>
+              <resolution>1</resolution>
+              <min_angle>${min_rad}</min_angle>
+              <max_angle>${max_rad}</max_angle>
+            </horizontal>
+            <vertical>
+              <samples>2</samples>
+              <resolution>0.01</resolution>
+              <min_angle>-0.01</min_angle>
+              <max_angle>0.01</max_angle>
+            </vertical>
+          </scan>
+          <range>
+            <min>${min_range}</min>
+            <max>${max_range}</max>
+            <resolution>0.001</resolution>
+          </range>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.03</stddev>
+          </noise>
+        </lidar>
+      </sensor>
+    </gazebo>
+  </xacro:macro>
+</robot>
