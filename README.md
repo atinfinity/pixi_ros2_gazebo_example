@@ -61,6 +61,32 @@ Please add the following description to `pixi.toml`.
 scripts = ["install/setup.sh"]
 ```
 
+## Mapping
+
+### Launch Gazebo
+
+```bash
+pixi run ros2 launch megarover_samples_ros2 vmegarover_with_sample_world.launch.py
+```
+
+### Launch Slam Toolbox for Mapping
+
+```bash
+pixi run ros2 launch megarover_samples_ros2 vmegarover_mapping.launch.py
+```
+
+### Launch Teleop
+
+```bash
+pixi run ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
+
+### Save Map
+
+```bash
+pixi run ros2 launch megarover_samples_ros2 vmegarover_save_map.launch.py
+```
+
 ## Navigation
 
 ### Launch Gazebo
