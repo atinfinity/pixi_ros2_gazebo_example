@@ -7,10 +7,10 @@
         <topic>${prefix}_camera_sensor</topic>
         <update_rate>30.0</update_rate>
         <camera>
-          <horizontal_fov>1.56207</horizontal_fov>
+          <horizontal_fov>1.2</horizontal_fov>
           <image>
-            <width>1280</width>
-            <height>720</height>
+            <width>320</width>
+            <height>240</height>
             <format>R8G8B8</format>
           </image>
           <clip>
@@ -26,14 +26,13 @@
               <far>5.0</far>
             </clip>
           </depth_camera>
-          <optical_frame_id>${prefix}_camera_link</optical_frame_id>
+          <optical_frame_id>${prefix}_camera_optical_link</optical_frame_id>
           <noise>
             <type>gaussian</type>
             <mean>0.0</mean>
             <stddev>0.007</stddev>
           </noise>
         </camera>
-        <ignition_frame_id>${prefix}_camera_link</ignition_frame_id>
       </sensor>
     </gazebo>
   </xacro:macro>

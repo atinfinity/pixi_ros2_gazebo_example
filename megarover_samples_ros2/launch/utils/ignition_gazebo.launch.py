@@ -124,19 +124,6 @@ def generate_launch_description():
             ("/front_camera_sensor/image", "/front_camera_sensor/image_raw"),
         ]
     )
-    points_bridge = Node(
-        package="ros_gz_bridge",
-        executable="parameter_bridge",
-        name='points_bridge',
-        output='screen',
-        parameters=[{
-            'use_sim_time': use_sim_time
-        }],
-        arguments=[
-            # IGN -> ROS
-            "/front_camera_sensor/points@sensor_msgs/msg/PointCloud2[gz.msgs.PointCloudPacked",
-        ]
-    )
     rgb_camera_info_bridge = Node(
         package="ros_gz_bridge",
         executable="parameter_bridge",
@@ -181,7 +168,6 @@ def generate_launch_description():
         base_topic_bridge,
         scan_bridge,
         image_bridge,
-        points_bridge,
         rgb_camera_info_bridge,
         depth_camera_info_bridge
     ])

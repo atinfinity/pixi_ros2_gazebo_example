@@ -46,6 +46,16 @@ def generate_launch_description():
         }.items()
     )
 
+    # depth_image_proc
+    depth_image_proc_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            PathJoinSubstitution([launch_file_dir, 'utils', 'depth_image_proc.launch.py'])
+        ),
+        launch_arguments={
+            'use_sim_time': use_sim_time,
+        }.items()
+    )
+
     return LaunchDescription([
         declare_use_sim_time,
         declare_gui,
@@ -54,4 +64,5 @@ def generate_launch_description():
         ignition_gazebo_launch,
 
         robot_description_launch,
+        depth_image_proc_launch,
     ])
