@@ -34,11 +34,10 @@ colcon-common-extensions \
 "setuptools<=58.2.0" \
 ros-humble-joint-state-publisher \
 ros-humble-xacro \
-ros-humble-ros-gz-bridge \
-ros-humble-ros-gz \
-ros-humble-ros-gz-sim \
-ros-humble-ros-gz-image \
-ros-humble-ros-gz-interfaces \
+ros-humble-ros-ign-bridge \
+ros-humble-ros-ign-gazebo \
+ros-humble-ros-ign-image \
+ros-humble-ros-ign-interfaces \
 ros-humble-slam-toolbox \
 ros-humble-nav2-bringup \
 ros-humble-navigation2
